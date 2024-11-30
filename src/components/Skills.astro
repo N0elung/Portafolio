@@ -1,0 +1,26 @@
+---
+const Habilidades = [
+  { src: "/HTML.svg", nombre: "HTML" },
+  { src: "/CSS.svg", nombre: "CSS" },
+  { src: "/JS.svg", nombre: "JavaScript" },
+  { src: "/React.svg", nombre: "React" },
+  { src: "/Tailwind.svg", nombre: "Tailwind" },
+  { src: "/Astro.svg", nombre: "Astro" },
+  { src: "/NodeJS.svg", nombre: "Node.js" },
+  { src: "/C.svg", nombre: "C" },
+];
+---
+
+<section>
+  <h1>Skills</h1>
+  <div class="flex gap-4 flex-wrap">
+    {
+      Habilidades.map((habilidad) => (
+        <div class="flex gap-2 bg-white text-black rounded-full p-2">
+          <img src={habilidad.src} alt="e" class="h-5 w-5" />
+          <p>{habilidad.nombre}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

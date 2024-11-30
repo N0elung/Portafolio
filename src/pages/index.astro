@@ -3,15 +3,20 @@ import { changeLanguage } from "i18next";
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Container from "@components/Container.astro";
+import About from "@components/About.astro";
+import Work from "@components/Work.astro";
+import Education from "@components/Education.astro";
+import Skills from "@components/Skills.astro";
 
 changeLanguage("es");
 ---
 
 <Layout title="Test">
-	<Container>
-		<Hero  />
-		
-	</Container>
+  <Container>
+    <Hero />
+    <About />
+    <Work />
+    <Education />
+    <Skills />
+  </Container>
 </Layout>
-
-

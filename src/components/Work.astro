@@ -1,0 +1,37 @@
+---
+const Trabajos = [
+  {
+    src: "/PrometheusTJ.jpg",
+    alt: "prometheusTJ",
+    nombre: "Prometheus R&D",
+    puesto: "Front-End",
+    fecha: "Septiembre 2024 - Actual",
+    url: "https://www.prometheustij.com/",
+  },
+];
+---
+
+<section class="mt-12 text-black">
+  <h1 class="text-2xl font-semibold text-white">Experiencia de trabajo</h1>
+  {
+    Trabajos.map((trabajo) => (
+      <a href={trabajo.url} target="_blank">
+        <div class="flex justify-between items-center mt-6 bg-[#afa486bb] p-3 rounded-full ">
+          <div class="flex gap-7 ">
+            {" "}
+            <img
+              class="rounded-full h-16 w-16"
+              src={trabajo.src}
+              alt={trabajo.alt}
+            />{" "}
+            <div class="flex flex-col justify-center">
+              <p class="text-sm font-bold">{trabajo.nombre}</p>
+              <p class="text-sm">{trabajo.puesto}</p>
+            </div>
+          </div>
+          <p class="text">{trabajo.fecha}</p>
+        </div>
+      </a>
+    ))
+  }
+</section>

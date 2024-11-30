@@ -1,0 +1,36 @@
+---
+const Escuelas = [
+  {
+    src: "/UABC.png",
+    alt: "UABC",
+    nombre: "Universidad Autonoma de Baja California",
+    carrera: " Cuarto semestre de Ing. Software y Tecnologías Emergentes",
+    fecha: "2023 - Actual",
+    url: "https://www.uabc.mx/",
+  },
+];
+---
+
+<section class="mt-12 text-black">
+  <h1 class="text-2xl font-semibold text-white">Estudios</h1>
+  {
+    Escuelas.map((escuela) => (
+      <a href={escuela.url} target="_blank">
+        <div class="flex justify-between items-center mt-6 bg-[#afa486bb] p-3 rounded-full">
+          <div class="flex gap-7 hover:cursor-pointer">
+            <img
+              class="rounded-full h-16 w-16 bg-lime-100"
+              src={escuela.src}
+              alt={escuela.alt}
+            />
+            <div class="flex flex-col justify-center">
+              <p class="text-sm font-bold">{escuela.nombre}</p>
+              <p class="text-sm">{escuela.carrera}</p>
+            </div>
+          </div>
+          <p class="text">{escuela.fecha}</p>
+        </div>
+      </a>
+    ))
+  }
+</section>
