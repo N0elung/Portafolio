@@ -11,6 +11,6 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost:4321/",
+  site: "https://noel-beltran-portfolio.vercel.app/",
   integrations: [tailwind(), react(), astroI18next(), sitemap(), robotsTxt()],
 });
