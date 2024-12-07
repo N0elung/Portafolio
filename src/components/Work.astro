@@ -16,8 +16,8 @@ const Trabajos = [
   {
     Trabajos.map((trabajo) => (
       <a href={trabajo.url} target="_blank">
-        <div class="flex justify-between items-center mt-6 bg-[#afa486bb] p-3 rounded-full ">
-          <div class="flex gap-7 ">
+        <div class="flex justify-between items-center mt-6 bg-[#949086bd] p-3 rounded-full ">
+          <div class="flex gap-7 items-center justify-center">
             {" "}
             <img
               class="rounded-full h-16 w-16"
@@ -29,7 +29,9 @@ const Trabajos = [
               <p class="text-sm">{trabajo.puesto}</p>
             </div>
           </div>
-          <p class="text">{trabajo.fecha}</p>
+          <p class="text-sm md:text-base w-2/5 flex justify-end">
+            {trabajo.fecha}
+          </p>
         </div>
       </a>
     ))
